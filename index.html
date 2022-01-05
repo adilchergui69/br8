@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./icon.jpg">
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="./back-video.mp4" type="video/mp4">
+      </video>
+      <audio style="display: none;" controls loop autoplay height="" width="">
+        <source  src="./back-music.mp3" type="audio/mp3" />
+      </audio>
+
+      <button onclick="printData()" class="button" id="print"><img src="printer-xxl.png" style="
+        WIDTH: 20PX;
+    "></button>
+  <img class="diplay" id="imageGood" src="/good.png" alt="" srcset="" style="width: 26px;display: block;position: absolute;top: 3PX;background-color: #add9ae;MARGIN: -1PX;margin-left: 4PX;PADDING-BOTTOM: 2PX;PADDING-TOP: 2PX;"> <p class="diplay" id="message">  </p>
+    <table   class="list" id="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>email</th>
+                <th>Language</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Edit/Delete</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        
+    </table>
+    
+    <div class="container">
+        <div class="header">
+            <h2 style="text-align: center;" >Book Information</h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="adil">Title:</label>
+                <input autocomplete="off" type="text" placeholder="book title" id="titlet" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="adil">email:</label>
+                <input autocomplete="off" type="text" placeholder="book email" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>Author:</label>
+                <input autocomplete="off" type="text" placeholder="author" id="author" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+           
+                
+                <label for="start">Publication Date:</label>
+
+                <input type="date" id="date" name="trip-start">
+           
+                <small>Error message</small>
+
+            </div>
+            <div class="form-control">
+                <label for="adil">Price:</label>
+                <input autocomplete="off" type="text" placeholder="book price" id="price"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+           
+
+              <div class="form-control">
+                <label for="adil">Language:</label>
+                <select id="lang" autocomplete="off" name="selection" >
+                    <option disabled hidden selected value> -- select an option -- </option>
+                    <option value="arabic">Arabic</option>
+                    <option value="France">France</option>
+                    <option value="English">English</option>
+                    <option value="Swedish">Swedish</option>
+               
+                    
+                </select>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+
+            </div>
+            <div id="radio_container" class="form-control">
+                <label  style="display: block;" for="adil"> Book Type:</label>
+                <label id="type" class="container-radio">One
+                    <input type="radio" value="One" name="season" class="type">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label id="type" class="container-radio" >Two
+                    <input type="radio" value="Two" name="season" class="type">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label id="type" class="container-radio">Three
+                    <input type="radio" value="Three" name="season" class="type">
+                    <span class="checkmark"></span>
+                  </label>
+                <p id="radiobtn" ></p>
+             
+            </div>
+            
+            <button id="Submit">Submit</button>
+            <input type="button"  onClick="onUpdate(this)" value="Update" id="Update" >
+            
+
+            
+
+           
+        </form>
+    </div>
+<script src="./table.js"></script>
+</body>
+</html>

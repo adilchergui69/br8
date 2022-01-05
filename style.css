@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+@font-face {
+	font-family: 'harry';
+	src: URL('./HarryPotter-ov4z.ttf') format('truetype');
+  }
+
+  @font-face {
+	font-family: 'harry2';
+	src: URL('./ParryHotter-LOZ.ttf') format('truetype');
+  }
+
+
+* {
+	box-sizing: border-box;
+	padding: 0%;
+	margin: 0%;
+}
+
+
+
+body {
+	
+	font-family: 'Open Sans', sans-serif;
+	padding: 0%;
+	padding: 2%;
+
+
+	min-height: 100vh;
+	margin: 0;
+}
+
+
+#background-video {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+  }
+
+.container {
+	background-image: url("./smoke4.gif");
+	background-repeat: no-repeat;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+.header {
+	font-family: 'harry';
+	MARGIN-BOTTOM: 5PX;
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #f7f7f7;
+	padding: 20px 40px;
+}
+
+.header h2 {
+	margin: 0;
+}
+
+.form {
+	
+	padding: 0px 40px;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+
+.form-control label {
+	font-family: 'harry2';
+	display: inline-block;
+	margin-bottom: 5px;
+	color: white;
+}
+
+.form-control input {
+	border: 1px solid rgb(165,161,161);
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control select {
+	border: 1px solid rgb(165,161,161);
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control select:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success select {
+	border-color: #2ecc71;
+}
+
+.form-control.error select {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.option i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+	margin-top: 3%;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+	margin-top: 3%;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+
+#Submit {
+	background-color: #b65959;
+	border: 2px solid #b65959;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+button:active {
+	background-color: #3e8e41;
+	box-shadow: 1PX  3px #666;
+	transform: translateY(4px);
+  }
+  #Update:active {
+	background-color: #19a8cc;
+	box-shadow: 1PX  3px #666;
+	transform: translateY(4px);
+  }
+
+  .edit:active {
+	
+	box-shadow: 1PX  3px #666;
+	transform: translateY(4px);
+  }
+button:hover{
+	background-color: #50df90;
+
+}
+
+
+
+
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+.delete {
+	background-color: black;
+	color: white;
+	margin-left: 4PX;
+}
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+}
+.gta {
+    display: block;
+}
+
+
+
+.container-radio {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+  }
+  
+  /* Hide the browser's default radio button */
+  .container-radio input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-radio:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+	background-color: #b65959;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+	display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+	   top: 8px;
+	  left: 8px;
+	  width: 8px;
+	  height: 8px;
+	  border-radius: 50%;
+	  background: white;
+  }
+
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
+
+
+
+table{
+    width: 80%;
+    background: #b65959;
+}
+
+table.list{
+    text-align: center;
+    width: 64%;
+	position: absolute;
+	left: 33.5%;
+
+}
+
+.myAudio {
+	opacity: 10%;
+}
+.myAudio:hover{
+	opacity: 100%;
+}
+td{
+    border: 1px solid rgba(204, 200, 200, 0.527);
+    text-align: left;
+    padding: 8px 15px;
+	text-align: center;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(204,200,200);
+}
+
+input[type="text"],input[type="number"]{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+#Update {
+
+	background: #228fd2;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+	color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    outline: none;
+	display: none;
+	width: 313PX;
+    height: 46PX;
+}
+
+#Update:hover{
+	opacity: 90%;
+}
+
+.edit{
+	background-color: #e8e86b;
+}
+input[type="submit"]:hover{
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+#print{
+	POSITION: absolute;
+    LEFT: 343PX;
+	
+}
+
+button:hover{
+    background:#4b99d8 ;
+}
+
+th {
+	color: white;
+}
+
+
+
+
