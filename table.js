@@ -5,7 +5,11 @@
 // var pass3="chergui";
 document.getElementById('imageGood').style.display = "none";
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('backgroundAudio');
+    audio.muted = false; // Unmute after the audio starts playing
+  });
+  
 
 // password=prompt('Please enter your password ""dont try adil""');
 
@@ -216,6 +220,7 @@ function checkInputs() {
             trie()
             localStorage.setItem("anysavelocal",JSON.stringify(list))
             message.innerHTML = mylist.detailsOuvrage()
+            document.getElementById('messageMain').style.display = "block";
             document.getElementById('imageGood').style.display = "block";
             message.classList.add('diplay');
             tbody.innerHTML = "";

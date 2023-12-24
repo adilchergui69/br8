@@ -24,10 +24,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	padding: 0%;
 	padding: 2%;
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	overflow: hidden;
 
-
-	min-height: 100vh;
-	margin: 0;
 }
 
 
@@ -550,3 +550,10 @@ th {
 
 
 
+#messageMain {
+	display: none;
+	background-color: #000;
+    padding: 20px;
+    color: antiquewhite;
+    margin-bottom: 2%;
+}  

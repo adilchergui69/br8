@@ -13,17 +13,22 @@
     <link rel="icon" type="image/x-icon" href="./icon.jpg">
 </head>
 <body>
-    <video id="background-video" autoplay loop muted>
-        <source src="./back-video.mp4" type="video/mp4">
-      </video>
-      <audio style="display: none;" controls loop autoplay height="" width="">
-        <source  src="./back-music.mp3" type="audio/mp3" />
-      </audio>
+<div id="messageMain">
+    <img class="diplay" id="imageGood" src="/good.png" alt="" srcset="" style="width: 26px;float: left;margin-right: 2%;"> <p class="diplay" id="message">  </p>
+
+</div>
+
+
+    
+<audio id="backgroundAudio" autoplay loop muted>
+    <source src="back-music.mp3" type="audio/mp3" />
+  </audio>
+  
+      
 
       <button onclick="printData()" class="button" id="print"><img src="printer-xxl.png" style="
         WIDTH: 20PX;
     "></button>
-  <img class="diplay" id="imageGood" src="/good.png" alt="" srcset="" style="width: 26px;display: block;position: absolute;top: 3PX;background-color: #add9ae;MARGIN: -1PX;margin-left: 4PX;PADDING-BOTTOM: 2PX;PADDING-TOP: 2PX;"> <p class="diplay" id="message">  </p>
     <table   class="list" id="table">
         <thead>
             <tr>
